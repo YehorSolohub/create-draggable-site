@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="libs/gsap.min.js" defer></script>
+    <script src="libs/Draggable.min.js" defer></script>
+    <script src="libs/InertiaPlugin.min.js" defer></script>
+    <script src="js/app.js" defer></script>
+
+    <style>
+      .gallery {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="header">
+      <img
+        src="https://imaginepoint.gallery/static/images/logo-mobile.svg"
+        alt="imaginepoint"
+      />
+      <span>Loading...</span>
+    </h1>
+
+    <!-- .gallery>(.gallery__item*20>img[src="img/$.jpg" alt="Alt"])*4 -->
+
+    <div class="gallery">
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/AWO8boFpHo8fbJxiGMHJdpOifJDCan17YsAMtTZr.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/s8bxKBHcLWHMubHsAcJPxJoEAkbK0M8tPHp33ufh.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/xHF9GrVMdAAoWY13f6ZAFraDoyHymJ5Iwoii0Mt6.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/xplyyR9uESOOA85NSTnbrvIKxFok0wGqkPRySMHI.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/20knjhY9cxp3YD2EM0e9tA0lmMMOZTnnz9O2PMEi.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/Z96fBOS3nGH9bpn5NZOqIuitNh7IHnxv2xJvYHYG.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/FLbPdIASeHszlmKGB6RqDqes4BouLcrDFEYzNg03.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/r4xxLHAi7eubN5fYaOObpTSEl0zXgu5Mlg0roQWb.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/WL7QKiNotxN9f2bczqvys2RRBQ5Z33SBXJuUlKsB.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/9Keztqyvrawig5J1DlPgfFuD3ilsQ6bqt6A4d7Hd.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/c9MpCFNI8in0gkovdXi0bP3kO4iD9RLV6DB7qEB1.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/L08arHXh6pcTUiqxlujaCWdTeECsWPNM2lhJlvgJ.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/oAibBtpJCOEKA9rnCLAxenCx4T6PABCns5udB1PA.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/t33hHYexPs5mpq8l2vbaLdu8P9XI8W7zyHpvj4RG.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/8LJPr9XNZAwYi5Q6942ScpCy8C8yGgaqriTHY5Y3.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/u7wpkEwiEVcPMTQl4G3OAoLgIvJE7x3xBrj8Nqtc.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/aTidp68xCnv02GFyrCwQtNi6pS3bYWpkN5u1BROH.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/5hJm3ZlF4Pqzed6ftyI4RJsDVtCSv7woUDCKTlsj.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/hE7qiamhMhPIFMk7zapnUKoVIhMvWfSCPMsGaYC4.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/IDwNGX0thfrqd44PVq5olQw8pcbmMGQnSjnftdQe.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/B0cnC0SXqMpRXNC4uEzR8AB4AkrfvJ3eyB9p3Gfm.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/HDGqRHTB5PgNwrpivWGSjgO4fha5wouzYe0XYNUk.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/P6ZTp4B1GgJgUA0b0t7V9Cj2JkujUam2nhq1E3af.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/fPEMszlYYNrsqfqjEYDXvT6Irhct6GdQUqr6yecB.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/HYKFjnlnvN9JW7xVDeF5aZinTWmEqMjw7tZUvYTZ.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/HeUncpD1hZ3L9LoZp2qbzK8PDO99nrrSnNiT28BS.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="		https://imaginepoint.gallery/storage/products/small/VUN3hcVfHZARkV3lNyakOjYrhvc2qtv02WLP25hI.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/dtIgoBFoKULUtGadB8zVh2wChftRTUfd6K0xmLCe.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/6QZqxkopFtBJr5ojC7NzoKFf30PJ42Wvb5cTKStb.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/6gK24rbgUxsDtvMBhKbIvcpJxbnxqmLXjdyKUy4P.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/QNurq5LvcnB9ZJB01MPajVf7fQyi9syUEAFAoYqd.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/QNurq5LvcnB9ZJB01MPajVf7fQyi9syUEAFAoYqd.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/KyN11CeZOJB5p3vX1k2XPY5UplwwOQcA0uXx6xF4.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/jr6wsgAgLPIqYzX90jot0n1URraglhzHLp0LTu3a.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/IQJKCHgQC5FrlU4av5lg58gBp6bL2fwrxeLQslDa.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/NoJqD3UaRAZcB8JzBWkV0LLxUmHOlI0UnhGVEd3W.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/2H84JFOIjmszCCV0iQSqAfWYDQssk7ZdjyO3jtBC.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/PqpkfSzSwyNIwaJswUphD5tDV3FgZ6yoSZkTOK8c.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/ClRDd67Xr4mmdpFzb4enp07eOMXe5be4ckJc50Tb.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/2NuiG12XxS8HJcounnGB3v0UdXR4yYeBbBGoSsNc.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/oeMxdYk8JMRIVEwWj4bAZ6bzpFtXQKAwAA30cIbR.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/Gl2VIusvtDBeQDcUXi8XsDZ6uVBBG48Jz3EXrZ81.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/qLQE4seKPWFcktwirtbobelpuXxsNx9k3KG7zTl7.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/Kti8ovJz11Jjp7G60bSgT0y1GifU6bT9rxfgi4or.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/4v1kPp8pWoK4t8KZINUEarG9A6FiXNJ1UqTUMWNn.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/gULdbW2OZUxucR7kraVydwZTMsvSEif6r1JZp6tG.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/dctqyDQMV37kXlQsQ8155wF8xc6LygsxWaIxNkox.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/3nvnVbH32v1fxS9IzxyKZg8CBFiRqvuPmvCFqyJS.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/lh4z4DhjDAUVlmSHrplki7nzcXGaOgnjetn8Pmpr.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/BuWnN5CxBWxSbq9xgGzQQHOOd1Bv390tkpKPQmJH.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/weuVSHfPv0Q3gHfiDAHGKKFRsSOYUA9I0TRN8e7q.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/FQwUuuYOLFhsR4sKZq4tmNGI3tIMBf6Kc3n0do36.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/V4yp9fv1AZOIpPNjGSFSizsG6G1N2pEXoWErJkPO.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/AxyVeIlZejXog2vXE1uePLorQsVt8GkmWoF8UEr3.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="https://imaginepoint.gallery/storage/products/small/t1lghHxxrhhMLgRQYSMd9TwTJkeE9i0ukjuMDj5t.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/5cYtGljoNrxAIUtquceGPNzdRX8nNKNjjIFk9sZA.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/xm5iaMRYr9ohyVaLknA4O66JRcZRZPib6WOH3iKp.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/Ragm3zVAYlxAe2g6Lqr6XFkUuYVzDpMYRWUc58F8.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/xyry7CZTg88l2Ov6RCiC9BRPdGIvaU39JeauSl75.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/qO7ZN3yFgodMaoHod4FkYL6VG2jFYS23VZcramGF.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/ifWxnYxsH2REqyfcQpgMCwBDhwqHZewPwQKcOpKT.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/kHHDodmIfAF0kLWpnnH4dZuFAYWjSYD2WJYj0DEn.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/FGF81wK07QB8wcO0Hnjg7MFXqhEz8VdPdz5UbW93.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/bHDB4VX2UFgec2M8o9RBNNAyuhJc2Zrzr5MOqCqi.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/q9GsLS1qCKIJyRW2VakNYQyjYRTlj7ZLztTnvSVw.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/DHnZ0UVWOjkIfrBSEl1mqw1bXkzJuJdtFZk3jG9D.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/RAAtEL6IGB0Mz4NBSlKRolpAEpf6facbwy1CjF8I.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/bEiK1WnNDou4G4FYJT9ONXTStBE6ty4MeUDVCo5g.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/Bngt9mTdM8WQpgLsPLLvpEZ1cM3riWG2osdHhWyg.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/fnLsXOiB4OwGKrFFtEfwYbifuzI2WSZvovXI5usw.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/mlveM9AbIY68YZo4C7l6I0Bx7h8fPMb8jI32pmHr.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/WKpHvwtw6zstAmTF0SgIfsfuvxVIfaQQTLPH0ppm.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/4G09fIKNW0HdbGH5MPUoFrEMpRKqd53O8irxrpqP.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/WwAxSjghBkNbpIqFya1a2F2612IuCfRCSSSBcPzD.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/dSYL5emtNAnAibt4tI773UpBIf6sp20hzY7mOz2O.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/oA5OZssUG8ussfZxiAXoygUVpJAG1qjwnGNactbX.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/Jf20Pfev7U1N3SlFq2CQhkWEZmHn96X5ZKxwXWyz.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/VvwbabqLEbjju5rkdJw0xISiDIgzGCeGgoZeZbK1.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/FIAfXdfLszbhKbttriNOF6A7vz2v4XNcaox029H5.jpg"
+          alt="Alt"
+        />
+      </div>
+      <div class="gallery__item">
+        <img
+          src="	https://imaginepoint.gallery/storage/products/small/SgX4RVlWE2Oer3r36dRXVlRWX0D0VN6krj3SJ28L.jpg"
+          alt="Alt"
+        />
+      </div>
+    </div>
+  </body>
+</html>
